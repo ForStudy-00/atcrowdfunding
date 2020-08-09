@@ -1,0 +1,22 @@
+server:
+  port: 4000
+spring:
+  application:
+    name: yjn-crowd-auth
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  redis:
+    host: localhost
+    password: root
+    port: 6379
+  session:
+    store-type: redis
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 10000
+

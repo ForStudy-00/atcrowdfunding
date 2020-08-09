@@ -1,0 +1,17 @@
+server:
+  port: 3000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+spring:
+  application:
+    name: yjn-crowd-redis
+  redis:
+    host: localhost
+    password: root
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100

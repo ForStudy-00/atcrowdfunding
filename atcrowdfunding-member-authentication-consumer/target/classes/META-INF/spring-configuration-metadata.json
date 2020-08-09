@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "short.message",
+      "type": "com.yjn.crowd.config.ShortMassageProperties",
+      "sourceType": "com.yjn.crowd.config.ShortMassageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "short.message.app-code",
+      "type": "java.lang.String",
+      "sourceType": "com.yjn.crowd.config.ShortMassageProperties"
+    },
+    {
+      "name": "short.message.message-list",
+      "type": "java.lang.String",
+      "sourceType": "com.yjn.crowd.config.ShortMassageProperties"
+    },
+    {
+      "name": "short.message.template-i-d",
+      "type": "java.lang.String",
+      "sourceType": "com.yjn.crowd.config.ShortMassageProperties"
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistentConfig">
+    <option name="historyConfigList">
+      <map>
+        <entry key="t_admin">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="adminDao" />
+              <option name="daoPackage" value="com.yjn.crowd.mapper" />
+              <option name="daoPostfix" value="Dao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="admin" />
+              <option name="modelPackage" value="com.yjn.crowd.po" />
+              <option name="name" value="t_admin" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$/atcrowdfunding-member-entity" />
+              <option name="tableName" value="t_admin" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="t_member">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="TMemberDao" />
+              <option name="daoPackage" value="com.yjn.crowd.mapper" />
+              <option name="daoPostfix" value="TMemberDao" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="MenberPo" />
+              <option name="modelPackage" value="com.yjn.crowd.po" />
+              <option name="name" value="t_member" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="t_member" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="t_member_confirm_info">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="MemberConfirmInfoMapper" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="MemberConfirmInfoMapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="MemberConfirmInfoPO" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="t_member_confirm_info" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="t_member_confirm_info" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="t_member_launch_info">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="MemberLaunchInfoMapper" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="MemberLaunchInfoMapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="MemberLaunchInfoPO" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="t_member_launch_info" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="t_member_launch_info" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="t_project">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ProjectMapper" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="ProjectMapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="ProjectPO" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="t_project" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="t_project" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="t_project_item_pic">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ProjectItemPicMapper" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="ProjectItemPicMapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="ProjectItemPicPO" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="t_project_item_pic" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="t_project_item_pic" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="t_return">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="ReturnMapper" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="ReturnMapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="ReturnPO" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="t_return" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="t_return" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="t_tag">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="TagMapper" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="TagMapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="TagPO" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="t_tag" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="t_tag" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+        <entry key="t_type">
+          <value>
+            <Config>
+              <option name="comment" value="true" />
+              <option name="daoMvnPath" value="src/main/java" />
+              <option name="daoName" value="TypeMapper" />
+              <option name="daoPackage" value="generate" />
+              <option name="daoPostfix" value="TypeMapper" />
+              <option name="modelMvnPath" value="src/main/java" />
+              <option name="modelName" value="TypePO" />
+              <option name="modelPackage" value="generate" />
+              <option name="name" value="t_type" />
+              <option name="needToStringHashcodeEquals" value="true" />
+              <option name="overrideJava" value="true" />
+              <option name="overrideXML" value="true" />
+              <option name="primaryKey" value="id" />
+              <option name="projectFolder" value="$PROJECT_DIR$" />
+              <option name="tableName" value="t_type" />
+              <option name="useExample" value="true" />
+              <option name="useLombokPlugin" value="true" />
+              <option name="useSchemaPrefix" value="true" />
+              <option name="xmlMvnPath" value="src/main/resources" />
+              <option name="xmlPackage" value="generator" />
+            </Config>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

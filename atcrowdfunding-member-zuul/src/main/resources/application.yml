@@ -1,0 +1,35 @@
+server:
+  port: 80
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1000/eureka
+spring:
+  application:
+    name: yjn-crowd-zuul
+  redis:
+    host: localhost
+    password: root
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+  session:
+    store-type: redis
+
+zuul:
+  routes:
+    crowd-portal:
+      service-id: yjn-crowd-auth
+      path: /**
+    crowd-project:
+      service-id: yjn-crowd-project
+      path: /project/**
+  ignored-services: "*"
+  sensitive-headers: "*"
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+

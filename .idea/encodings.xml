@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-common-utils/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-authentication-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-authentication-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-mysql-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-mysql-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-order-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-pay-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-project-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-project-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-redis-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-redis-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-zuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/atcrowdfunding-member-zuul/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
