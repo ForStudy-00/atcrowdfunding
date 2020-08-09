@@ -23,7 +23,7 @@ public class ProjectConsumerHandler {
             HttpSession session,
             ModelMap modelMap
     ){
-
+        System.out.println("haha");
         return null;
     }
 }
