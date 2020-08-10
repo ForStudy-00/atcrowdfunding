@@ -15,4 +15,12 @@ public class CrowdConstant {
     public static final String ATTR_NAME_MESSAGE = "message";
     public static final String MESSAGE_CODE_NOT_EXISTS ="验证码已过期!请检查手机号或重新发送" ;
     public static final String MESSAGE_CODE_INVALID = "验证码错误";
+    public static final String MESSAGE_HEADER_PIC_UPLOAD_FAILED = "头图上传失败！";
+    public static final String MESSAGE_DETAIL_PIC_EMPTY = "上传为空！";
+    public static final String MESSAGE_HEADER_PIC_EMPTY = "头图不可为空！";
+    public static final String MESSAGE_DETAIL_PIC_UPLOAD_FAILED = "详图上传失败！";
+
+    public static final String ATTR_NAME_TEMPLE_PROJECT = "tempProject";
+    public static final String MESSAGE_TEMPLE_PROJECT_MISSING = "临时存储的project对象丢失！";
+    public static final String ATTR_NAME_PORTAL_DATA = "portal_data";
 }

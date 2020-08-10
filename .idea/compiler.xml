@@ -8,16 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="atcrowdfunding-member-mysql-provider" />
+        <module name="atcrowdfunding-member-project-consumer" />
         <module name="atcrowdfunding-member-redis-provider" />
         <module name="atcrowdfunding-member-zuul" />
         <module name="atcrowdfunding-member-pay-consumer" />
         <module name="atcrowdfunding-member-entity" />
         <module name="atcrowdfunding-member-api" />
-        <module name="atcrowdfunding-common-utils" />
         <module name="atcrowdfunding-member-order-consumer" />
         <module name="atcrowdfunding-member-eureka" />
         <module name="atcrowdfunding-member-authentication-consumer" />
-        <module name="atcrowdfunding-member-project-consumer" />
+        <module name="atcrowdfunding-common-utils" />
       </profile>
     </annotationProcessing>
   </component>
