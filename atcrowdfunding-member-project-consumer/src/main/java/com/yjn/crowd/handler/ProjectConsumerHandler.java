@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
@@ -27,6 +28,12 @@ public class ProjectConsumerHandler {
     @Autowired
     private OSSProperties ossProperties;
 
+    @ResponseBody
+    @RequestMapping("/create/upload/return/picture.json")
+    public ResultEntity<String> updateLoadReturnPicture(){
+      return  null;
+    };
+
     @RequestMapping("/create/project/information")
     public String saveProjectBasicInfo(
             ProjectVO projectVO,
@@ -37,7 +44,9 @@ public class ProjectConsumerHandler {
     ) throws IOException {
         boolean headerPictureIsEmpty = headerPicture.isEmpty();
         if (headerPictureIsEmpty) {
-
+            // 如果没有上传头图则返回到表单页面并显示错误消息
+            modelMap.addAttribute(CrowdConstant.ATTR_NAME_MESSAGE, CrowdConstant.MESSAGE_HEADER_PIC_EMPTY);
+            return "project-launch";
         }
         ResultEntity<String> uploadHeaderPicResultEntity = CrowdUtil.uploadFileToOss(ossProperties.getEndPoint(),
                 ossProperties.getAccessKeyId(),
@@ -48,12 +57,12 @@ public class ProjectConsumerHandler {
                 Objects.requireNonNull(headerPicture.getOriginalFilename()));
         String result = uploadHeaderPicResultEntity.getOperationResult();
         if (ResultEntity.SUCCESS.equals(result)) {
-            // 5.如果成功则从返回的数据中获取图片访问路径
+            // 如果成功则从返回的数据中获取图片访问路径
             String headerPicturePath = uploadHeaderPicResultEntity.getQueryData();
-            // 6.存入 ProjectVO 对象中
+            // 存入 ProjectVO 对象中
             projectVO.setHeaderPicturePath(headerPicturePath);
         } else {
-            // 7.如果上传失败则返回到表单页面并显示错误消息
+            // 如果上传失败则返回到表单页面并显示错误消息
             modelMap.addAttribute(CrowdConstant.ATTR_NAME_MESSAGE, CrowdConstant.MESSAGE_HEADER_PIC_UPLOAD_FAILED);
             return "project-launch";
         }
@@ -82,7 +91,7 @@ public class ProjectConsumerHandler {
                     detailPicture.getInputStream(),
                     ossProperties.getBucketName(),
                     ossProperties.getBucketDomain(),
-                    detailPicture.getOriginalFilename());
+                    Objects.requireNonNull(detailPicture.getOriginalFilename()));
             // 7.检查上传结果
             String detailUploadResult = detailUploadResultEntity.getOperationResult();
             if (ResultEntity.SUCCESS.equals(detailUploadResult)) {
