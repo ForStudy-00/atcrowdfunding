@@ -1,7 +1,8 @@
 package com.yjn.crowd.po;
 
-import java.io.Serializable;
 import lombok.Data;
+
+import java.io.Serializable;
 
 /**
  * t_project
@@ -24,7 +25,7 @@ public class ProjectPO implements Serializable {
     /**
      * 筹集金额
      */
-    private Long money;
+    private Integer money;
 
     /**
      * 筹集天数

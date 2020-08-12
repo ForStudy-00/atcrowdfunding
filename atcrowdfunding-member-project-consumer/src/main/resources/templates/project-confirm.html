@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns:th="www.thymeleaf.org">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -211,7 +211,7 @@ $('#myTab a').click(function (e) {
                                 
                                     <div class="row clearfix">
                                         <div class="col-md-6 column">
-                                            <form id="confirmFomr" th:action="@{/project/create/confirm}" method="post" role="form">
+                                            <form id="confirmForm" th:action="@{/project/create/confirm}" method="post" role="form">
                                                 <div class="form-group">
                                                      <label for="exampleInputEmail1">易付宝企业账号：</label><input type="email" name="paynum" class="form-control" id="exampleInputEmail1" />
                                                 </div>
@@ -238,7 +238,7 @@ $('#myTab a').click(function (e) {
                             <script type="text/javascript">
                             	$(function(){
                             		$("#submitBtn").click(function(){
-                            			$("#confirmFomr").submit();
+                            			$("#confirmForm").submit();
                             		});
                             	});
                             </script>

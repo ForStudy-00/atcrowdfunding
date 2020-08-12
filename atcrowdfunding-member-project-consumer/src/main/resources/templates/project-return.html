@@ -432,14 +432,14 @@
 </div>
 <!-- /container -->
 <script type="text/javascript" th:src="@{/jquery/jquery-2.1.1.min.js}"
-        src="jquery/jquery-2.1.1.min.js"></script>
+></script>
 <script type="text/javascript"
         th:src="@{/bootstrap/js/bootstrap.min.js}"
-        src="bootstrap/js/bootstrap.min.js"></script>
+></script>
 <script type="text/javascript" th:src="@{/script/docs.min.js}"
-        src="script/docs.min.js"></script>
+></script>
 <script type="text/javascript" th:src="@{/script/back-to-top.js}"
-        src="script/back-to-top.js"></script>
+></script>
 <script type="text/javascript">
     $('#myTab a').click(function (e) {
         e.preventDefault()
@@ -493,16 +493,16 @@
             "dataType": "json",
             "success": function (response) {
 
-                var result = response.result;
+                var result = response.operationResult;
 
-                if (result == "SUCCESS") {
+                if (result === "SUCCESS") {
                     alert("上传成功！");
 
                     // 如果上传成功，则从响应体数据中获取图片的访问路径
                     returnObj.describPicPath = response.data;
                 }
 
-                if (result == "FAILED") {
+                if (result === "FAILED") {
                     alert(response.message);
                 }
 
@@ -538,8 +538,8 @@
             "dataType": "json",
             "data": returnObj,
             "success": function (response) {
-                var result = response.result;
-                if (result == "SUCCESS") {
+                var result = response.operationResult;
+                if (result === "SUCCESS") {
                     alert("这一条保存成功！");
 
                     // 使用returnObj填充表格

@@ -4,14 +4,13 @@ package com.yjn.crowd.mapper;
 import com.yjn.crowd.po.MemberConfirmInfoPO;
 import com.yjn.crowd.po.MemberConfirmInfoPOExample;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @author Lenovo
- */
-public interface MemberConfirmInfoMapper {
-    long countByExample(MemberConfirmInfoPOExample example);
+@Service
+public interface MemberConfirmInfoPOMapper {
+    int countByExample(MemberConfirmInfoPOExample example);
 
     int deleteByExample(MemberConfirmInfoPOExample example);
 
