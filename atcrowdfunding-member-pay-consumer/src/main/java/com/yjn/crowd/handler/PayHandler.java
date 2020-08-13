@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -34,7 +35,7 @@ public class PayHandler {
     private PayProperties payProperties;
     private Logger logger = LoggerFactory.getLogger(PayHandler.class);
     @Autowired
-    private MysqlRemoteService mySQLRemoteService;
+    private MysqlRemoteService mysqlRemoteService;
 
     @RequestMapping("/notify")
     public void notifyUrlMethod(HttpServletRequest request) throws AlipayApiException, UnsupportedEncodingException {
@@ -51,15 +52,15 @@ public class PayHandler {
                         : valueStr + values[i] + ",";
             }
             //乱码解决，这段代码在出现乱码时使用
-            valueStr = new String(valueStr.getBytes("ISO-8859-1"), "utf-8");
+            valueStr = new String(valueStr.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
             params.put(name, valueStr);
         }
-
+        //调用SDK验证签名
         boolean signVerified = AlipaySignature.rsaCheckV1(
                 params,
                 payProperties.getAlipayPublicKey(),
                 payProperties.getCharset(),
-                payProperties.getSignType()); //调用SDK验证签名
+                payProperties.getSignType());
 
             //——请在这里编写您的程序（以下代码仅作参考）——
 
@@ -69,15 +70,16 @@ public class PayHandler {
         3、校验通知中的seller_id（或者seller_email) 是否为out_trade_no这笔单据的对应的操作方（有的时候，一个商户可能有多个seller_id/seller_email）
         4、验证app_id是否为该商户本身。
         */
-        if (signVerified) {//验证成功
+        if (signVerified) {
+            //验证成功
             //商户订单号
-            String out_trade_no = new String(request.getParameter("out_trade_no").getBytes("ISO-8859-1"), "UTF-8");
+            String out_trade_no = new String(request.getParameter("out_trade_no").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
 
             //支付宝交易号
-            String trade_no = new String(request.getParameter("trade_no").getBytes("ISO-8859-1"), "UTF-8");
+            String trade_no = new String(request.getParameter("trade_no").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
 
             //交易状态
-            String trade_status = new String(request.getParameter("trade_status").getBytes("ISO-8859-1"), "UTF-8");
+            String trade_status = new String(request.getParameter("trade_status").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
             logger.info("trade_status=" + trade_status);
             logger.info("out_trade_no=" + out_trade_no);
             logger.info("trade_no=" + trade_no);
@@ -129,7 +131,7 @@ public class PayHandler {
                         : valueStr + values[i] + ",";
             }
             //乱码解决，这段代码在出现乱码时使用
-            valueStr = new String(valueStr.getBytes("ISO-8859-1"), "utf-8");
+            valueStr = new String(valueStr.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
             params.put(name, valueStr);
         }
 
@@ -142,20 +144,20 @@ public class PayHandler {
         //——请在这里编写您的程序（以下代码仅作参考）——
         if (signVerified) {
             //商户订单号
-            String orderNum = new String(request.getParameter("out_trade_no").getBytes("ISO-8859-1"), "UTF-8");
+            String orderNum = new String(request.getParameter("out_trade_no").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
 
             //支付宝交易号
-            String payOrderNum = new String(request.getParameter("trade_no").getBytes("ISO-8859-1"), "UTF-8");
+            String payOrderNum = new String(request.getParameter("trade_no").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
 
             //付款金额
-            String orderAmount = new String(request.getParameter("total_amount").getBytes("ISO-8859-1"), "UTF-8");
+            String orderAmount = new String(request.getParameter("total_amount").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
             // 保存到数据库
             // 从Session获取OrderVO对象
             OrderVO orderVO = (OrderVO) session.getAttribute("orderVO");
 
             orderVO.setPayOrderNum(payOrderNum);
             // 发送给mysql远程接口
-            ResultEntity<String> resultEntity = mySQLRemoteService.saveOrderRemote(orderVO);
+            ResultEntity<String> resultEntity = mysqlRemoteService.saveOrderRemote(orderVO);
             logger.info("Order save result=" + resultEntity.getOperationResult());
             return "trade_no:" + payOrderNum + "<br/>out_trade_no:" + orderNum + "<br/>total_amount:" + orderAmount;
         } else {

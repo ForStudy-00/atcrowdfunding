@@ -28,6 +28,9 @@ zuul:
     crowd-order:
       service-id: yjn-crowd-order
       path: /order/**
+    crowd-pay:
+      service-id: yjn-crowd-pay
+      path: /pay/**
   ignored-services: "*"
   sensitive-headers: "*"
 
