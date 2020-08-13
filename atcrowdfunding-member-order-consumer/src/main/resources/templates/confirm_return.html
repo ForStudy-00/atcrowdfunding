@@ -272,34 +272,34 @@
 	<script src="script/docs.min.js"></script>
 	<script src="script/back-to-top.js"></script>
 	<script type="text/javascript">
-		/*var signalPurchase = [[${session.orderProjectVO.signalPurchase}]];
+		var signalPurchase = [[${session.orderProjectVO.signalPurchase}]];
 		var purchase = [[${session.orderProjectVO.purchase}]];
-	
+
 		$('#myTab a').click(function(e) {
 			e.preventDefault()
 			$(this).tab('show')
 		});
-		
+
 		$("#returnCountInput").change(function(){
 			var returnCount = $.trim($(this).val());
-			
+
 			if(returnCount == null || returnCount == "") {
 				alert("请输入有效数据！");
-				
+
 				$(this).val(this.defaultValue);
-				
+
 				return ;
 			}
-			
+
 			if(signalPurchase == 1 && returnCount > purchase) {
 				alert("不能超过限购数量！");
 				return ;
 			}
-			
+
 			var supportPrice = [[${session.orderProjectVO.supportPrice}]];
-			
+
 			$("#totalAmount").text("￥"+(supportPrice * returnCount));
-		});*/
+		});
 		
 		$("#submitBtn").click(function(){
 			var returnCount = $("#returnCountInput").val();

@@ -25,6 +25,9 @@ zuul:
     crowd-project:
       service-id: yjn-crowd-project
       path: /project/**
+    crowd-order:
+      service-id: yjn-crowd-order
+      path: /order/**
   ignored-services: "*"
   sensitive-headers: "*"
 

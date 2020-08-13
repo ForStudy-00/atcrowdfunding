@@ -15,7 +15,7 @@
                 property="portalProjectVOList"
                 column="id"
                 ofType="com.yjn.crowd.vo.PortalProjectVO"
-                select="com.yjn.cloud.mapper.ProjectPOMapper.selectPortalProjectVOList"/>
+                select="com.yjn.crowd.mapper.ProjectPOMapper.selectPortalProjectVOList"/>
     </resultMap>
 
     <resultMap type="com.yjn.crowd.vo.DetailProjectVO"
@@ -33,11 +33,11 @@
         <result column="header_picture_path" property="headerPicturePath"/>
         <collection
                 property="detailPicturePathList"
-                select="com.yjn.cloud.mapper.ProjectPOMapper.selectDetailPicturePath"
+                select="com.yjn.crowd.mapper.ProjectPOMapper.selectDetailPicturePath"
                 column="id"/>
         <collection
                 property="detailReturnVOList"
-                select="com.yjn.cloud.mapper.ProjectPOMapper.selectDeatailReturnVO"
+                select="com.yjn.crowd.mapper.ProjectPOMapper.selectDeatailReturnVO"
                 column="id"/>
     </resultMap>
 

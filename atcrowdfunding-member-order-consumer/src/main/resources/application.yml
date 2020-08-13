@@ -1,8 +1,8 @@
 server:
-  port: 5000
+  port: 6001
 spring:
   application:
-    name: yjn-crowd-project
+    name: yjn-crowd-order
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
@@ -16,10 +16,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:1000/eureka
-aliyun:
-  oss:
-    access-key-id: LTAI4GCNRahWnbBUbyTzDuma
-    access-key-secret: GddN3bEygMU8zbp4vbCrybOPyQW7Zu
-    bucket-domain: mytest977.oss-cn-beijing.aliyuncs.com
-    bucket-name: mytest977
-    end-point: oss-cn-beijing.aliyuncs.com

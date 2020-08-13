@@ -38,8 +38,6 @@ public class ProjectConsumerHandler {
     private MysqlRemoteService mysqlRemoteService;
 
 
-
-
     @RequestMapping("/get/project/detail/{projectId}")
     public String getProjectDetail(@PathVariable("projectId") Integer projectId, Model model) {
         ResultEntity<DetailProjectVO> resultEntity = mysqlRemoteService.getDetailProjectVORemote(projectId);

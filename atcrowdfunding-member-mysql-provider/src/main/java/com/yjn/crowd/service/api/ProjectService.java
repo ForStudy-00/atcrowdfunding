@@ -1,5 +1,6 @@
 package com.yjn.crowd.service.api;
 
+import com.yjn.crowd.vo.DetailProjectVO;
 import com.yjn.crowd.vo.PortalTypeVO;
 import com.yjn.crowd.vo.ProjectVO;
 
@@ -17,4 +18,5 @@ public interface ProjectService {
      */
     void saveProject(ProjectVO projectVO, Integer memberId);
     List<PortalTypeVO> getPortalTypeVO();
+    DetailProjectVO getDetailProjectVO(Integer projectId);
 }
